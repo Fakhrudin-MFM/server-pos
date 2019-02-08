@@ -1,15 +1,17 @@
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
 
-const routes = require('./routes/')
-app.use(routes)
+const routes = require('./routes/');
+app.use(routes);
 
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000;
 app.listen(port, process.env.IP, () => {
-	console.log('Server running on port : ', port)
-})
+  console.log('Server running on port : ', port);
+});
 
-module.exports = app
+module.exports = app;

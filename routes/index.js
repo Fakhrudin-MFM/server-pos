@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 // import routes
-const user = require('./user.routes');
+const kategori = require('./kategori.routes');
 const home = require('./home.routes');
 
 // use routes
-router.use('/user', user);
+router.use('/kategori', kategori);
 router.use('/', home);
 
 module.exports = router;
