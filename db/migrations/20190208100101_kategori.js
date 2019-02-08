@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('kategori', function(table) {
     table
-      .integer('id')
+      .increments()
       .primary()
       .unique();
     table.string('nama');

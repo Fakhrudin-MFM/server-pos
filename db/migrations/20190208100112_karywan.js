@@ -1,9 +1,6 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('karyawan', function(table) {
-    table
-      .integer('id')
-      .primary()
-      .unique();
+    table.increments();
     table.string('nama');
     table.string('email');
   });
